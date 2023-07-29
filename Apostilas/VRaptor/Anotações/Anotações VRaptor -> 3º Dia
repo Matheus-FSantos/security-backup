@@ -1,0 +1,125 @@
+					Anotações VRaptor
+
+
+ ------ Componentes ------ 
+
+Validator -> Esse componente ajuda a fazer as validações do lado do Servidor, com ele, nós executamos a lógica de validação, e se caso haja algum erro, especifica para onde deve ser redirecionada a requisição (Deve-se recebê-lo no construtor da Controller)
+
+
+
+
+ ------ Notações ------
+
+@Component -> Indica que uma classe será uma dependencia e que pode, quando se fizer necessário, ser instanciada pelo VRaptor.
+
+@Resource -> Funciona como o @Controller do SPRING, informa que uma classe contem a regra de negocio.
+
+@PostConstruct -> Os métodos anotados com essa notação serão executados assim que o escopo declarado for iniciado.
+
+@PreDestroy -> Os métodos anotados com essa notação serão executados assim que o escopo for finalizado, ou seja, ao final de uma aplicação, requisição ou sessão de usuário.
+
+
+
+
+ ------ Atributos JSP ------
+
+${errors} -> É disponibilizado do VRaptor para o JSP e ele contém uma lista com, um ou mais, erros no sistema.
+
+
+
+ ------ Notações de Escopo ------
+
+@RequestScoped -> O componente será criado a cada requisição (O padrão de cada componente).
+@SessionScoped -> O componente será criado a cada criação de sessão e permenecerá ativo por cada sessão do usuário (Igual fazia com JSP puro).
+@ApplicationScoped -> O componente será criado uma única vez na aplicação inteira.
+@PrototypeScoped -> O componente será criado toda vez que for solicitado pelo usuário.
+
+
+
+
+
+ ------ Expressões utilizadas na Apostila ------ 
+
+Dependencia -> É um relacionamento de uma classe com a outra.
+
+Design Pattern Singleton -> É um padrão de projeto de software que garante a existencia de apenas uma instância de uma classe, mantendo um ponto global de acesso ao seu objeto, o que é muito útil no projeto proposto já que é preciso criar algumas Sessions no meio do caminho da aplicação (A cada requisição) o que poderia custar muito caro para um projeto real em uma empresa real, porém, como estamos podemos utilizar um recurso para esse controle, chamado de: Escopo.
+
+Escopo -> Tempo de vida de de instâncias de uma determinada classe.
+
+
+
+
+ ------ Observações ------
+ 
+Nota 1 ---> Quando se vai utilizar a refatoração para deixar a parte de criar Sessions mais "Clean", deve-se criar uma classe que cria uma SessionFactory, e outra que classe que cria somente a nova Session, deve ser passado, no caso da classe que cria uma Session, a instancia de SessionFactory em seu construtor, para que assim possa vir interligar as 2 classes, deixando um codigo mais limpo ----------- Cada ambas as classes devem conter a implementação da interface ComponentFactory<T>, e deve ser passado no lugar do tipo generico "T" o tipo de retorno que a classe virá a trazer, no caso da criadora de Session, deve ter <Session> e no caso da criadora de SessionFactory <SessionFactory>.
+ 
+ 
+ 
+ 
+Nota 2 ---> Em uma aplicação web existe dois tipos de validações que se faz necessário para evitar possiveis erros no sistema, criados por parte do usuário usando de forma indevida o "app", os dois tipos de validação que existe é:
+ 
+(Validação) Lado Cliente: Verificamos os dados antes de mandar-los para o servidor, assim o feedback da validação é instantanêo.
+(Validação) Lado Servidor: Os dados são enviados para o servidor, e se houver erros, o servidor retorna os erros para o cliente.
+
+
+
+
+Nota 3 ---> Existem duas maneiras de trabalhar com Validator, a maneira "clássica" e a maneira fluente. A maneira classica cria-se os if's e dentro deles adicina as mensagem manualmente, ex:
+
+	if(mensagem.length < 30){
+		new Validator().add(new ValidationMessage("A mensagem deve ter no minimo 30 chars"));
+	}
+	
+Já a maneira tradicional você informa O QUE QUER QUE SEJA VERDADE, e caso isso não ocorra, adiciona uma mensagem internalizada.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(produto.getNome() == null || produto.getNome().length() < 3){
+            validator.add(new ValidationMessage("O Nome não pode ser nulo e deve conter mais de 3 caracteres", "produto.nome"));
+        }
+
+        if(produto.getDescricao() == null || produto.getDescricao().length() > 40){
+            validator.add(new ValidationMessage("A Descrição não pode ser nula e deve conter 40 carateres no máximo", "produto.descricao"));
+        }
+
+        if(produto.getPreco() == null || produto.getPreco() <= 0.0){
+            validator.add(new ValidationMessage("O Preço precisa ser positivo", "produto.preco"));
+        }
+        
+        
+        
+        
+        
+        
+        validator.checking(new Validations() {{
+            that(produto.getNome() != null && produto.getNome().length() >= 3, "produto.nome", "nome.obrigatorio");
+            that(produto.getDescricao() != null && produto.getDescricao().length() < 40, "produto.descricao", "descricao.obrigatoria");
+            that(produto.getPreco() != null && produto.getPreco() > 0.0, "produto.preco", "preco.positivo");
+        }});
+        
+        
+        
+        
+        
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>8.0.0.Final</version>
+        </dependency>
+

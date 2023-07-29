@@ -1,0 +1,5 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.configuration;
+
+public class AppConfig {
+
+}

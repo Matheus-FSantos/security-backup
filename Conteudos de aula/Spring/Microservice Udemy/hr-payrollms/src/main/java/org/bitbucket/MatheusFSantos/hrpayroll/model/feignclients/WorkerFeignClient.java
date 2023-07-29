@@ -1,0 +1,43 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.feignclients;
+
+import java.util.List;
+import java.util.UUID;
+
+import org.bitbucket.MatheusFSantos.hrpayroll.model.domain.Worker;
+import org.bitbucket.MatheusFSantos.hrpayroll.model.expcetion.domain.WorkerExceptions;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Component
+@FeignClient(name="hr-workerms", path="/api/workers")
+public interface WorkerFeignClient {
+	
+	@GetMapping
+	ResponseEntity<List<Worker>> findAll();
+	
+	@GetMapping(params="id")
+	ResponseEntity<Worker> findById(@RequestParam(name="id", required=true) UUID id) throws WorkerExceptions;
+	
+	@GetMapping(params="name")
+	ResponseEntity<List<Worker>> findByName(@RequestParam String name);
+	
+	@GetMapping(params="name-contains")
+	ResponseEntity<List<Worker>> findByNameContains(@RequestParam String name);
+	
+	@PostMapping
+	ResponseEntity<Void> save(@RequestBody Worker worker) throws WorkerExceptions;
+	
+	@PutMapping(params="id")
+	ResponseEntity<Void> update(@RequestParam(name="id", required=true) UUID id, @RequestBody Worker updatedWorker) throws WorkerExceptions;
+	
+	@DeleteMapping(params="id")
+	ResponseEntity<Void> delete(@RequestParam(name="id", required=true) UUID id) throws WorkerExceptions;
+	
+}

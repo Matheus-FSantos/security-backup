@@ -1,0 +1,42 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.exception.DTO;
+
+import java.util.List;
+import java.io.Serial;
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.exception.domain.WorkerExceptions;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+public class WorkerExceptionsDTO implements Serializable {
+	
+	@Serial
+	private static final long serialVersionUID = 1L;
+
+	private final List<String> exceptionMessages;
+	
+	private final String exceptionService;
+	
+	@JsonFormat(pattern="dd/MM/yyyy HH:mm:ss")
+	private final LocalDateTime exceptionDate;
+	
+	public WorkerExceptionsDTO(WorkerExceptions workerExceptions) {
+		this.exceptionMessages = workerExceptions.getExceptionMessages();
+		this.exceptionService = workerExceptions.getExceptionService();
+		this.exceptionDate = workerExceptions.getExceptionDate();
+	}
+	
+	public List<String> getExceptionMessages() {
+		return this.exceptionMessages;
+	}
+	
+	public String getExceptionService() {
+		return this.exceptionService;
+	}
+	
+	public LocalDateTime getExceptionDate() {
+		return this.exceptionDate;
+	}
+	
+}

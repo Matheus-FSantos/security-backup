@@ -1,0 +1,7 @@
+INSERT INTO tb_worker (id, name, daily_income, created_at, updated_at) VALUES ('2a1b0e96-270e-11ee-be56-0242ac120002', 'Matheus Ferreira Santos', 150.0, NOW(), NOW());
+INSERT INTO tb_worker (id, name, daily_income, created_at, updated_at) VALUES ('4ff9ce5e-270e-11ee-be56-0242ac120002', 'Joyce Pereira Albuquerque', 150.0, NOW(), NOW());
+INSERT INTO tb_worker (id, name, daily_income, created_at, updated_at) VALUES ('550ddf98-270e-11ee-be56-0242ac120002', 'Roberto do Nascimento Júnior', 114.0, NOW(), NOW());
+INSERT INTO tb_worker (id, name, daily_income, created_at, updated_at) VALUES ('5fdaf3de-270e-11ee-be56-0242ac120002', 'Flavio Dino Prado do Nascimento', 430.0, NOW(), NOW());
+INSERT INTO tb_worker (id, name, daily_income, created_at, updated_at) VALUES ('68451e00-270e-11ee-be56-0242ac120002', 'Edson Filho de Souza', 160.90, NOW(), NOW());
+INSERT INTO tb_worker (id, name, daily_income, created_at, updated_at) VALUES ('6cf22c86-270e-11ee-be56-0242ac120002', 'Leticia Miranda', 1000.0, NOW(), NOW());
+INSERT INTO tb_worker (id, name, daily_income, created_at, updated_at) VALUES ('70ea84fa-270e-11ee-be56-0242ac120002', 'Fernanda dos Santos Filho', 540.0, NOW(), NOW()

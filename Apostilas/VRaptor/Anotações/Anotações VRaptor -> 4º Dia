@@ -1,0 +1,83 @@
+					Anotações VRaptor
+
+
+ ------ Validators (e suas Notações) ------ 
+ 
+É possivel adicionar algumas constraints em Entidades Hibernate, na propria linha de código Java, para isso é preciso utilizar os Validators (Hibernate/Javax), os mais conhecidos são:
+ 
+@NotNull -> Adiciona-se essa "notação" para informar que o campo informado não pode ser nulo.
+@NotEmpty -> O mesmo que o anterior, porém com um acressimo a mais, não aceita uma String vazia.
+@Size -> Impoe restrições ao tamanho do campo.
+@Min/@Max -> Restringe o valor dos numeros.
+@Past/@Future -> Impoe restrições temporais sobre determinados atributos.
+@Pattern -> Serve para restringir valores usando uma expressão regular.
+@Email -> Serve para conferir a validade de um e-mail.
+ 
+PS: (Observações > Nota 1)
+ 
+Ainda sobre validators é possivel adicionar mensagens dinamicas previamente estabelecidas pelo programador usando o "atributo" ---> Message <---
+ 
+message: Permite criar mensagens dinamicas para o sistema caso alguma constraints seja "quebrada" (Não cabivel as "Notações" @Min/@Max)
+
+
+
+
+ ------ HTTP Operações ------
+
+Os protocolos HTTP possuem alguns metodos, os mais conhecidos são: Get(pegar), post(criar), put(editar), delete(deletar), porém, existem outros que são legais "ficar de olho" na aplicação, que seriam:
+
+Head -> Retorna somente os cabeçalhos de uma resposta.
+
+Options -> Retorna os métodos HTTP suportados pelo servidor para a URL especificada. 
+
+Trace -> Devolve a mesma requisição que for enviada e vê se ouve mudanças ou adições feitas por servidores intermediários.
+
+
+
+
+ ------ Notações VRaptor ------ 
+
+@Path("/<URI>") -> Informa uma URI "alterada" para um método(lógica), exemplo: @Path("/teste")
+
+
+
+
+ ------ Expressões utilizadas na Apostila ------ 
+ 
+Expressões Regulares -> São padrões utilizados para identificar determinadas combinações ou cadeias de caracteres em uma String (Famoso RegEx)
+
+
+REST -> É um conjunto de restrições que define um padrão de arquitetura com caracteristicas definidas.
+
+
+URI -> Sigla para Unified Resource Identifier, que em sua tradução, identificador único de um recurso
+
+
+Substantivos -> São os nomes dos recursos do Sistema (qualquer sistema)
+
+
+
+
+ ------ Observações ------
+ 
+Nota 1 -> Utilizando as restrições pelo Validators, seja ele Hibernate ou Javax, consegue-se economizar linhas de codigos escrevendo IFs de validação, e ao invez de escrever varios IFs como esse:
+
+	if(<object>.getNome().length() < 3 || <object>.getNome() == null) {
+		validator.add(new ValidationMessage("O nome do produto está fora das restrições"))
+	}
+	
+passa-se a escrever apenas:
+
+	validator.validate(<object>);
+	validator.onErrorForwardTo(<classe>).<metodo>();
+	
+e isso acaba economizando tempo e linhas de codigo e deixa o codigo muito mais clean e mais facil de se entender somente de "bater" o olho.
+
+
+Nota 2 -> Uma requisição WEB contem três tipos de componentes importantes: Substantivos, verbos e tipos de conteúdo (Content Types), no escopo de uma aplicação RESTful, constuma-se reforçar mais os substantivos do que os verbos 
+
+
+Nota 3 -> Ao criar URI's devemos levar em consideração que elas representam os recursos do sistema e não as ações do sistema, em Sistemas REST as URI's devem conter apenas nomes SUBSTANTIVOS, exemplo:
+
+"/produtos/adiciona": Por conter um verbo não é bom 
+"/produtos": correto

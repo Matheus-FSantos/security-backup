@@ -1,0 +1,12 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.validation;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.domain.Worker;
+import org.bitbucket.MatheusFSantos.hrworker.model.exception.domain.WorkerExceptions;
+
+public class WorkerValidation {
+	
+	private static void validation(Worker worker) throws WorkerExceptions {
+		
+	}
+
+}

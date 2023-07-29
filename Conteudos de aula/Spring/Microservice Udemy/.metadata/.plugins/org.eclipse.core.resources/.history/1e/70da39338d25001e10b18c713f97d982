@@ -1,0 +1,5 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.controller;
+
+public class PaymentController {
+
+}

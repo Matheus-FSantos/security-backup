@@ -1,0 +1,35 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.service;
+
+import java.util.UUID;
+
+import org.bitbucket.MatheusFSantos.hrpayroll.model.domain.Payment;
+import org.bitbucket.MatheusFSantos.hrpayroll.model.domain.Worker;
+import org.bitbucket.MatheusFSantos.hrpayroll.model.expcetion.domain.PayrollExceptions;
+import org.bitbucket.MatheusFSantos.hrpayroll.model.validation.UUIDValidation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class PaymentService {
+	
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	@Value("${hr-workerms.host}")
+	private String workerMSHost;
+
+	public Payment getPayment(String workerId, String days) throws PayrollExceptions {
+		
+		UUIDValidation.UUIDValidation(workerId);
+		
+		UUID UUID_workerId = UUID.fromString(workerId);
+		Integer Integer_days= Integer.parseInt(days);
+		
+		Worker worker = restTemplate.getForObject(null, Worker.class);
+		
+		return new Payment(worker.getName(), worker.getDailyIncome(), Integer_days);
+	}
+	
+}

@@ -1,0 +1,63 @@
+package org.bitbucket.MatheusFSantos.hrworker;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.UUID;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.domain.Worker;
+import org.bitbucket.MatheusFSantos.hrworker.model.exception.domain.WorkerExceptions;
+import org.bitbucket.MatheusFSantos.hrworker.model.service.WorkerService;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class HrWorkermsApplicationTests {
+
+	private UUID id;
+	
+	private Worker worker;
+	
+	@Autowired
+	private WorkerService workerService;
+	
+	@BeforeEach
+	void instanceWorker() {
+		if(worker == null)
+			this.worker = new Worker(null, "Trabalhador de Teste", 180.99);
+		
+		if(id == null)
+			this.id = this.workerService.save(new Worker(null, "Teste", 180.99)).getId();
+	}
+	
+	@Test
+	void saveMethod() {
+		Worker w = this.workerService.save(worker);
+		System.out.println("\n\n\n" + w + "\n\n\n");
+		
+		assertEquals(w.getName(), "Trabalhador de Teste");
+	}
+	
+	@Test
+	void deleteMethod() {
+		//Exception Not Excepted
+		try {
+			this.workerService.delete(this.id);
+			System.out.println("\n\n\nSUCESS!!!!\n\n\n");
+		} catch (WorkerExceptions exc) {
+			System.out.println(exc);
+		}
+		
+		//Exception Expected
+		try {
+			this.workerService.delete(this.id);
+			System.out.println("\n\n\nSUCESS!!!!\n\n\n");
+		} catch (WorkerExceptions exc) {
+			System.out.println(exc.getExceptionMessages());
+		}
+		
+	}
+
+}

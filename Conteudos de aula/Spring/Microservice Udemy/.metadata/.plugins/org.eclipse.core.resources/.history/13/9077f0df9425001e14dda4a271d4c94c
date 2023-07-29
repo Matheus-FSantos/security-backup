@@ -1,0 +1,9 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.validation;
+
+public class ParamsValidation {
+	
+	public static void validation(Map<String, String> requestParams) {
+		
+	}
+
+}

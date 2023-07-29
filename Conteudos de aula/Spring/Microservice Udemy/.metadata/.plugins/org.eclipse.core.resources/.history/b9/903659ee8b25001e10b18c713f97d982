@@ -1,0 +1,5 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.domain;
+
+public class Payment {
+
+}

@@ -1,0 +1,21 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.controller;
+
+import org.bitbucket.MatheusFSantos.hrpayroll.model.service.PaymentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/payments")
+public class PaymentController {
+
+	@Autowired
+	private PaymentService paymentService;
+	
+	@GetMapping(params=["id", "days"])
+	public ResponseEntity<?> getPayment() {
+		
+	}
+	
+}

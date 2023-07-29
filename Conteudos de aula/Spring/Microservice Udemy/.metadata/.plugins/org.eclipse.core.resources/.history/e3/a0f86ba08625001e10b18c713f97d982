@@ -1,0 +1,44 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.validation;
+
+import java.util.ArrayList;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.domain.Worker;
+import org.bitbucket.MatheusFSantos.hrworker.model.exception.domain.WorkerExceptions;
+
+import java.util.List;
+
+public class WorkerValidation {
+	
+	public static void validationWithoutId(Worker worker) throws WorkerExceptions {
+		List<String> messages = new ArrayList<>();
+		
+		if(worker == null)
+			messages.add("Worker is required!");
+		else {
+			nameValidation(messages, worker.getName());
+			dailyIncomeValidation(messages, worker.getDailyIncome());
+		}
+		
+		if(!messages.isEmpty())
+			throw new WorkerExceptions(messages);
+	}
+	
+	private static void nameValidation(List<String> messages, String name) {
+		if(name == null)
+			messages.add("Worker name is required!");
+		else if(name.length() < 4 || name.length() > 60)
+			messages.add("Invalid fields!");
+	}
+	
+	private static void dailyIncomeValidation(List<String> messages, Double dailyIncome) {
+		if(dailyIncome == null)
+			messages.add("Worker daily income is required!");
+		else if(dailyIncome <= 0)
+			messages.add("Invalid fields!");
+	}
+	
+	private static void uuidValidation(List<String> messages, UUID id) {
+		
+	}
+
+}

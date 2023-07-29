@@ -1,0 +1,95 @@
+package org.bitbucket.MatheusFSantos.hrworker;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.UUID;
+
+import org.assertj.core.util.Arrays;
+import org.bitbucket.MatheusFSantos.hrworker.model.domain.Worker;
+import org.bitbucket.MatheusFSantos.hrworker.model.exception.domain.WorkerExceptions;
+import org.bitbucket.MatheusFSantos.hrworker.model.service.WorkerService;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+@SpringBootTest
+class WorkerServiceTests {
+
+	private UUID id;
+	
+	private Worker worker;
+	
+	@Autowired
+	private WorkerService workerService;
+	
+	@BeforeEach
+	void instanceWorkerAndId() {
+		this.worker = new Worker(null, "Matheus Ferreira Santos", 180.99);
+		this.id = this.workerService.save(new Worker(null, "Teste", 180.99)).getId();
+	}
+	
+	@BeforeAll
+	static void init() {
+		List<Worker> workers = new ArrayList<Worker>();
+		
+		workers.add(new Worker(null, "Matheus Ferreira Santos", 150.95));
+		workers.add(new Worker(null, "Luiz Henrique de Souza", 350.0));
+		workers.add(new Worker(null, "Paulo Antônio", 99.0));
+		
+		for(Worker worker : workers)
+			this.workerService.save(worker);
+		
+	}
+	
+	@Test
+	void findAll() {
+		System.out.println("\n\n\nFind All method\n" + this.workerService.findAll() + "\n\n\n");
+	}
+	
+	@Test
+	void findByNameMethod() {
+		//Expected Empty Array
+		System.out.println("\n\n\nFind By Name method\n" + this.workerService.findByName("Matheus Ferreira Santos") + "\n\n\n");
+	}
+	
+	@Test
+	void findByNameContains() {
+		//Expected Empty Array
+		System.out.println("\n\n\nFind By Name Contains method\n" + this.workerService.findByNameContains("z") + "\n\n\n");
+	}
+	
+	@Test
+	void saveMethod() {
+		Worker w = this.workerService.save(worker);
+		System.out.println("\n\n\nSave Method\n" + w + "\n\n\n");
+		
+		assertEquals(w.getName(), "Matheus Ferreira Santos");
+	}
+	
+	@Test
+	void deleteMethod() {
+		//Exception Not Excepted
+		try {
+			this.workerService.delete(this.id);
+			System.out.println("\n\n\nSUCESS!!!!\n\n\n");
+		} catch (WorkerExceptions exc) {
+			System.out.println(exc.getExceptionMessages());
+		}
+		
+		//Exception Expected
+		try {
+			this.workerService.delete(this.id);
+			System.out.println("\n\n\nSUCESS!!!!\n\n\n");
+		} catch (WorkerExceptions exc) {
+			System.out.println(exc.getExceptionMessages());
+		}
+		
+	}
+
+}

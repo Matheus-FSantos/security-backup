@@ -1,0 +1,10 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.feignclients;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Component;
+
+@Component
+@FeignClient(name="hr-workerms")
+public interface WorkerFeignClient {
+
+}

@@ -1,0 +1,5 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.exception.DTO;
+
+public class WorkerExceptionsDTO {
+
+}

@@ -1,0 +1,9 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.validation;
+
+public class WorkerValidation {
+	
+	private static void validation(Worker worker) {
+		
+	}
+
+}

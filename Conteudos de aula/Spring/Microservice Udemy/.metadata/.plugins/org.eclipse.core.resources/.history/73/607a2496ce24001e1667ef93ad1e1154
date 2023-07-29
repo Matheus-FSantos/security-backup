@@ -1,0 +1,25 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.service;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.DAO.WorkerReposity;
+import org.bitbucket.MatheusFSantos.hrworker.model.domain.Worker;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.UUID;
+
+@Service
+public class WorkerService {
+
+	@Autowired
+	private WorkerReposity workerReposity;
+	
+	public List<Worker> findAll() {
+		return this.workerReposity.findAll();
+	}
+	
+	public Worker findById(UUID id) {
+		return this.workerReposity.findById(id).orElse(null);
+	}
+	
+}

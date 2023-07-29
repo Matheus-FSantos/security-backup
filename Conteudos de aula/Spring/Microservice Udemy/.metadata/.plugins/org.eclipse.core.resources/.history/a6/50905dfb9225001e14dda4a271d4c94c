@@ -1,0 +1,10 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.expcetion;
+
+import java.io.Serial;
+
+public class PayrollExceptions extends Exception {
+	
+	@Serial
+	private static final long serialVersionUID = 1L;
+
+}

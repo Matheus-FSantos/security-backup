@@ -1,0 +1,35 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.domain;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tb_worker")
+public class Worker implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	
+	private UUID id;
+	
+	private String name;
+	
+	private Double dailyIncome;
+	
+	private LocalDateTime createdAt;
+	
+	private LocalDateTime updatedAt;
+	
+	public Worker() { }
+	
+	public Worker(UUID id, String name, Double dailyIncome) {
+		this.id = id;
+		this.name = name;
+		this.dailyIncome = dailyIncome;
+		this.createdAt = LocalDateTime.now();
+		this.updatedAt = LocalDateTime.now();
+	}
+}

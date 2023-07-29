@@ -1,0 +1,5 @@
+package org.bitbucket.MatheusFSantos.hrworker.controller;
+
+public class WorkerController {
+
+}

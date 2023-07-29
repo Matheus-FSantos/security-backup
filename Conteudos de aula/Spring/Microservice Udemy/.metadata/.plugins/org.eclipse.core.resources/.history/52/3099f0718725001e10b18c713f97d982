@@ -1,0 +1,102 @@
+package org.bitbucket.MatheusFSantos.hrworker;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.bitbucket.MatheusFSantos.hrworker.model.service.WorkerService;
+import org.bitbucket.MatheusFSantos.hrworker.model.exception.domain.WorkerExceptions;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.domain.Worker;
+
+import java.util.UUID;
+import java.util.List;
+import java.util.ArrayList;
+
+@SpringBootTest
+class WorkerServiceTests {
+
+	private UUID id;
+	
+	private Integer count = 0;
+	
+	private Worker worker;
+	
+	@Autowired
+	private WorkerService workerService;
+	
+	
+	@BeforeEach
+	void instanceWorkerAndId() {
+		this.worker = new Worker(null, "Matheus Ferreira Santos", 180.99);
+		this.count += 1;
+		try {
+			this.id = this.workerService.save(new Worker(null, new String().concat("Teste" + count), 180.99)).getId();
+		} catch (WorkerExceptions e) {
+			System.out.println(e.getExceptionMessages());
+		}
+	}
+	
+	@Test
+	void findAll() {
+		System.out.println("\n\n\nFind All method\n" + this.workerService.findAll() + "\n\n\n");
+	}
+	
+	@Test
+	void findByNameMethod() {
+		System.out.println("\n\n\nFind By Name method\n" + this.workerService.findByName("Matheus Ferreira Santos") + "\n\n\n");
+	}
+	
+	@Test
+	void findByNameContains() {
+		System.out.println("\n\n\nFind By Name Contains method\n" + this.workerService.findByNameContains("z") + "\n\n\n");
+		
+	}
+	
+	@Test
+	void saveMethod() {
+		Worker w = null;
+		try {
+			w = this.workerService.save(worker);
+		} catch (WorkerExceptions e) {
+			System.out.println(e.getExceptionMessages());
+		}
+		System.out.println("\n\n\nSave Method\n" + w + "\n\n\n");
+		
+		List<Worker> workers = new ArrayList<Worker>();
+		
+		workers.add(new Worker(null, "Matheus Ferreira Santos", 150.95));
+		workers.add(new Worker(null, "Luiz Henrique de Souza", 350.0));
+		workers.add(new Worker(null, "Paulo Antônio", 99.0));
+		
+		for(Worker worker : workers)
+			this.workerService.save(worker);
+	
+		
+		assertEquals(w.getName(), "Matheus Ferreira Santos");
+	}
+	
+	@Test
+	void deleteMethod() {
+		//Exception Not Excepted
+		try {
+			this.workerService.delete(this.id);
+			System.out.println("\n\n\nSUCESS!!!!\n\n\n");
+		} catch (WorkerExceptions exc) {
+			System.out.println(exc.getExceptionMessages());
+		}
+		
+		//Exception Expected
+		try {
+			this.workerService.delete(this.id);
+			System.out.println("\n\n\nSUCESS!!!!\n\n\n");
+		} catch (WorkerExceptions exc) {
+			System.out.println(exc.getExceptionMessages());
+		}
+		
+	}
+
+}

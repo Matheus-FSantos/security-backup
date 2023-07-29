@@ -1,0 +1,1 @@
+INSERT INTO tb_worker (id, name, daily_income, created_at, updated_at) VALUES (UUID(), 'Matheus Ferreira Santos', 150.0, NOW(), NOW());

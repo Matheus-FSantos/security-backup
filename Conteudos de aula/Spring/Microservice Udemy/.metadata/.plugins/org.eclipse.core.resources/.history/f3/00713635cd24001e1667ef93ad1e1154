@@ -1,0 +1,15 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.service;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.DAO.WorkerReposity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class WorkerService {
+
+	@Autowired
+	private WorkerReposity workerReposity;
+	
+	
+	
+}

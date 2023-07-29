@@ -1,0 +1,20 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.configuration;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.service.WorkerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class DataBase {
+	
+	@Bean
+	public void init(
+			@Autowired WorkerService workerService
+	) {
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,34 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.validation;
+
+import java.util.ArrayList;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.domain.Worker;
+import org.bitbucket.MatheusFSantos.hrworker.model.exception.domain.WorkerExceptions;
+
+import java.util.List;
+
+public class WorkerValidation {
+	
+	private static void validation(Worker worker) throws WorkerExceptions {
+		List<String> messages = new ArrayList<>();
+		
+		if(worker == null)
+			messages.add("Worker is required!");
+		else {
+			
+			
+		}
+		
+		if(!messages.isEmpty())
+			throw new WorkerExceptions(messages);
+	}
+	
+	private static void nameValidation(List<String> messages, String name) {
+		if(name == null)
+			messages.add("Worker name is required!");
+		else if(worker.getName().length() < 4 || worker.getName().length() > 60)
+			messages.add("Invalid fields!");
+		
+	}
+
+}

@@ -1,0 +1,30 @@
+<div class="bg-slate-900 w-auto h-auto text-white">
+  <div class="flex flex-row-reverse items-center justify-between p-6">
+    <div class="flex gap-2">
+      <span class="bg-red-600 rounded-full w-6 h-6 cursor-pointer transition ease-in delay-0 hover:-translate-y-2 hover:scale-110 hover:bg-red-800 duration-100"></span>
+      <button class="bg-yellow-300 rounded-full w-6 h-6 cursor-pointer hover:ease-out transition ease-in delay-0 hover:-translate-y-2 hover:scale-110 hover:bg-yellow-700 duration-100"></button>
+      <button class="bg-green-500 rounded-full w-6 h-6 cursor-pointer hover:ease-out transition ease-in delay-0 hover:-translate-y-2 hover:scale-110 hover:bg-green-700 duration-100"></button>
+    </div>
+
+    <p class="relative inline-block">
+      <span class="text-gray-300 text-3xl font-bold">Kernel<span>&nbsp;<span class="text-gray-400 text-sm font-medium">Open Source Project!</span>
+    </p>
+
+    <button class="bg-inherit p-2 rounded-lg border-y-2 text-white transition-colors hover:bg-white hover:outline-double outline-4 outline-offset-2 outline-white hover:text-black">
+      Logout
+    </button>
+  </div>
+
+  <div class="bg-slate-700 h-60">
+    <div class="flex flex-row">
+      <nav class="pl-6 pt-6 w-40 h-60 bg-slate-800 flex flex-col gap-6">
+        <span class="cursor-pointer font-bold">Home</span>
+        <span class="cursor-pointer font-bold">Profile</span>
+        <span class="cursor-pointer font-bold">Ranking</span>
+        <span class="cursor-pointer font-bold">Settings</span>
+      </nav>
+      <main class="pl-6 pt-6">Content here</main>
+    </div>
+  </div>
+</div>
+

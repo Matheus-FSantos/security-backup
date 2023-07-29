@@ -1,0 +1,35 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.service;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import org.bitbucket.MatheusFSantos.hrpayroll.model.domain.Payment;
+import org.bitbucket.MatheusFSantos.hrpayroll.model.domain.Worker;
+import org.bitbucket.MatheusFSantos.hrpayroll.model.expcetion.domain.PayrollExceptions;
+import org.bitbucket.MatheusFSantos.hrpayroll.model.feignclients.WorkerFeignClient;
+import org.bitbucket.MatheusFSantos.hrpayroll.model.validation.UUIDValidation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class PaymentService {
+
+	@Autowired
+	private WorkerFeignClient workerFeignClient;
+
+	public Payment getPayment(String workerId, String days) throws PayrollExceptions {
+		
+		UUIDValidation.validation(workerId);
+		Worker worker = (Worker) workerFeignClient.findById(UUID.fromString(workerId)).getBody();
+		
+		if(worker != null)
+			return new Payment(worker, Integer.parseInt(days));
+		
+		throw new PayrollExceptions("Worker not found!");
+		
+	}
+	
+}

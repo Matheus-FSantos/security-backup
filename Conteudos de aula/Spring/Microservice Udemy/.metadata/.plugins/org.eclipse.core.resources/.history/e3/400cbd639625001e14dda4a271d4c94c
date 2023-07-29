@@ -1,0 +1,68 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.domain;
+
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Payment implements Serializable {
+	
+	@Serial
+	private static final long serialVersionUID = 1L;
+	
+	private Worker worker;
+	
+	private Integer days;
+	
+	public Payment() { }
+	
+	public Payment(String workerName, Double dailyIncome, Integer days) {
+		this.workerName = workerName;
+		this.dailyIncome = dailyIncome;
+		this.days = days;
+	}
+
+	@Override
+	public String toString() {
+		return "Payment [workerName=" + workerName + ", dailyIncome=" + dailyIncome + ", days=" + days + "]";
+	}
+
+	public String getWorkerName() {
+		return workerName;
+	}
+
+	public void updateWorkerName(String workerName) {
+		this.setWorkerName(workerName);
+	}
+
+	private void setWorkerName(String workerName) {
+		this.workerName = workerName;
+	}
+
+	public Double getDailyIncome() {
+		return dailyIncome;
+	}
+
+	public void updateDailyIncome(Double dailyIncome) {
+		this.setDailyIncome(dailyIncome);
+	}
+
+	private void setDailyIncome(Double dailyIncome) {
+		this.dailyIncome = dailyIncome;
+	}
+
+	public Integer getDays() {
+		return days;
+	}
+
+	public void updateDays(Integer days) {
+		this.setDays(days);
+	}
+
+	private void setDays(Integer days) {
+		this.days = days;
+	}
+
+	public Double getTotal() {
+		return this.getDailyIncome() * this.getDays();
+	}
+	
+}

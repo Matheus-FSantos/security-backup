@@ -1,0 +1,43 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.configuration;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.domain.Worker;
+import org.bitbucket.MatheusFSantos.hrworker.model.exception.domain.WorkerExceptions;
+import org.bitbucket.MatheusFSantos.hrworker.model.service.WorkerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class DataBase {
+
+    @Bean
+    CommandLineRunner init(@Autowired WorkerService workerService) {
+        return args -> {
+            List<Worker> workers = new ArrayList<Worker>();
+            workers.add(new Worker(UUID.fromString("1f26152e-7417-4eaf-b7b2-b2011638ddfe"), "Matheus Ferreira Santos", 150.0));
+            workers.add(new Worker(UUID.fromString("21e059f9-07f4-463b-a30a-a6b521a02fe5"), "Joyce Pereira Albuquerque", 150.0));
+            workers.add(new Worker(UUID.fromString("0faa6769-bd5e-4c16-be66-57f3a36e7a64"), "Roberto do Nascimento Júnior", 114.0));
+            workers.add(new Worker(UUID.fromString("488c3f1f-fe60-4ef5-84f4-cf64b2548d95"), "Flavio Dino Prado do Nascimento", 430.0));
+            workers.add(new Worker(UUID.fromString("8567609d-957f-4e17-835c-5c5ca563a671"), "Edson Filho de Souza", 160.90));
+            workers.add(new Worker(UUID.fromString("2e1a7712-335d-4c90-b96a-574001d15114"), "Leticia Miranda", 1000.0));
+            workers.add(new Worker(UUID.fromString("6409c82f-577d-47ec-8443-a07e9b9c2e6b"), "Fernanda dos Santos Filho", 540.0));
+
+            workers.forEach(worker -> {
+                try {
+                    workerService.save(worker);
+                } catch (WorkerExceptions e) {
+                    System.out.println(e.getMessage());
+                }
+            });
+
+        };
+    }
+	
+	
+
+}

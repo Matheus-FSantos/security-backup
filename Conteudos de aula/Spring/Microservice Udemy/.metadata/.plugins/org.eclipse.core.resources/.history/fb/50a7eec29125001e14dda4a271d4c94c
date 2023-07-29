@@ -1,0 +1,23 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.service;
+
+import java.util.UUID;
+
+import org.bitbucket.MatheusFSantos.hrpayroll.model.domain.Payment;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class PaymentService {
+	
+	@Autowired
+	private RestTemplate restTemplate;
+
+	public Payment getPayment(String workerId, String days) {
+		UUID UUID_workerId = UUID.fromString(workerId);
+		Integer Integer_days= Integer.parseInt(days);
+		
+		return new Payment("Matheus Ferreira Santos", 150.0, Integer_days);
+	}
+	
+}

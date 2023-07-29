@@ -1,0 +1,5 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.DAO;
+
+public interface WorkerDAO {
+
+}

@@ -1,0 +1,30 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.controller;
+
+import java.util.Map;
+import java.util.UUID;
+
+import org.bitbucket.MatheusFSantos.hrpayroll.model.domain.Payment;
+import org.bitbucket.MatheusFSantos.hrpayroll.model.service.PaymentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/payments")
+public class PaymentController {
+
+	@Autowired
+	private PaymentService paymentService;
+	
+	@GetMapping
+	public ResponseEntity<?> getPayment(@RequestParam(required=true) Map<String, String> requestParams) {
+		if(requestParams.containsKey("workerId") || requestParams.containsKey("days") ) {
+			Payment payment = this.paymentService.getPayment(UUID.fromString(requestParams.get("workerId")), Integer.parseInt(requestParams.get("days")));
+			return ResponseEntity.ok().body(payment);
+		}
+	}
+	
+}

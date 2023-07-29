@@ -1,0 +1,58 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.service;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.DAO.WorkerReposity;
+import org.bitbucket.MatheusFSantos.hrworker.model.domain.Worker;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+@Service
+public class WorkerService {
+
+	@Autowired
+	private WorkerReposity workerReposity;
+	
+	public List<Worker> findAll() {
+		return this.workerReposity.findAll();
+	}
+	
+	public Optional<Worker> findById(UUID id) {
+		return this.workerReposity.findById(id);
+	}
+	
+	public List<Worker> findByName(String name) {
+		return this.workerReposity.findByName(name);
+	}
+	
+	public List<Worker> findByNameContains(String name) {
+		return this.workerReposity.findByNameContains(name);
+	}
+	
+	public Worker save(Worker worker) {
+		worker.updateCreatedAt();
+		worker.updateUpdatedAt();
+		
+		return this.workerReposity.save(worker);
+	}
+	
+	public void update(UUID id, Worker updatedWorker) {
+		Optional<Worker> oldWorker = this.findById(id);
+		
+		if(oldWorker.isPresent()) {
+			this.modify(oldWorker, updatedWorker);
+		}
+	}
+	
+	public void delete(UUID id) {
+		if(this.findById(id).isPresent())
+			this.workerReposity.deleteById(id);
+	}
+	
+	private void modify(Worker oldWorker, Worker updatedWorker) {
+		
+	}
+	
+}

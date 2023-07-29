@@ -1,0 +1,22 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.domain;
+
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Payment implements Serializable {
+	
+	@Serial
+	private static final long serialVersionUID = 1L;
+	
+	private String workerName;
+	
+	private Double dailyIncome;
+	
+	private Integer days;
+	
+	private Double total;
+	
+	public Payment(String workerName, Double dailyIncome, Integer days, Double total) {
+		
+	}
+}

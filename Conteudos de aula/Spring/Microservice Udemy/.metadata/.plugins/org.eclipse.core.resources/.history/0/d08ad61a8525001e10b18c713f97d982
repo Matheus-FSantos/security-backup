@@ -1,0 +1,20 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.validation;
+
+import java.util.ArrayList;
+
+import org.bitbucket.MatheusFSantos.hrworker.model.domain.Worker;
+import org.bitbucket.MatheusFSantos.hrworker.model.exception.domain.WorkerExceptions;
+
+import java.util.List;
+
+public class WorkerValidation {
+	
+	private static void validation(Worker worker) throws WorkerExceptions {
+		
+		List<String> messages = new ArrayList<>();
+		
+		if(!messages.isEmpty())
+			throw new WorkerExceptions(messages);
+	}
+
+}

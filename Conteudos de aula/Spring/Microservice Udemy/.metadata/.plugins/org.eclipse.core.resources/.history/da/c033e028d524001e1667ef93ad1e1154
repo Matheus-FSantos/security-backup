@@ -1,0 +1,35 @@
+package org.bitbucket.MatheusFSantos.hrworker.model.exception.Domain;
+
+import java.time.LocalDateTime;
+import java.util.Collections;
+import java.util.List;
+
+public class WorkerExceptions extends Exception {
+	
+	private static final long serialVersionUID = 1L;
+
+	private final List<String> exceptionMessages;
+	
+	private final String exceptionService;
+	
+	private final LocalDateTime exceptionDate;
+
+	public WorkerExceptions(String exceptionMessages) {
+		this.exceptionMessages = Collections.singletonList(exceptionMessages);
+		this.exceptionService = "Worker Microservice";
+		this.exceptionDate = LocalDateTime.now();
+	}
+	
+	public List<String> getExceptionMessages() {
+		return this.exceptionMessages;
+	}
+	
+	public String exceptionService() {
+		return this.exceptionService;
+	}
+	
+	public LocalDateTime exceptionDate() {
+		return this.exceptionDate;
+	}
+	
+}

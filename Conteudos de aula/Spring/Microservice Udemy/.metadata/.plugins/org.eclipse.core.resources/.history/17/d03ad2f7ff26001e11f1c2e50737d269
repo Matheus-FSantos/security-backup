@@ -1,0 +1,5 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.feignclients;
+
+public interface WorkerFeignClient {
+
+}

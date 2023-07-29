@@ -1,0 +1,15 @@
+package org.bitbucket.MatheusFSantos.hrpayroll.model.service;
+
+import java.util.UUID;
+
+import org.bitbucket.MatheusFSantos.hrpayroll.model.domain.Payment;
+import org.springframework.stereotype.Service;
+
+@Service
+public class PaymentService {
+
+	public Payment getPayment(UUID workerId, Integer days) {
+		return new Payment("Matheus Ferreira Santos", 150.0, days);
+	}
+	
+}
