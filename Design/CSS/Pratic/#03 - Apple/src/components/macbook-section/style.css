@@ -1,0 +1,63 @@
+/* Component css here */
+
+@font-face {
+    font-family: SF Pro Display Regular;
+    src: url(../../../public/assets/fonts/sf-pro-display_regular.woff2);
+}
+
+@font-face {
+    font-family: SF Pro Text Light;
+    src: url(../assets/fonts/sf-pro-text_light.woff2);
+}
+
+.blue {
+    color: #06c;
+}
+
+.container {
+    width: 3008px;
+    height: 624px;
+    background-size: 3008px 624px;
+    background-repeat: no-repeat;
+    background-image: url("https://www.apple.com/v/home/bd/images/heroes/macbook-air-15/hero_macbook_air_15_midnight__ct0pgwizvree_large.jpg");
+}
+
+.c-texts {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.c-t-links {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    padding-top: 10px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.c-t-title {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.c-t-subtitle {
+    font-family: "SF Pro Display Regular";
+    font-size: 28px;
+}
+
+.c-t-link {
+    font-family: "SF Pro Display Regular";
+    font-size: 21px;
+    text-decoration: none;
+}
+
+.c-t-link:hover {
+    text-decoration: underline;
+}

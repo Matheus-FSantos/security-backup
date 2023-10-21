@@ -1,0 +1,114 @@
+@font-face {
+    font-family: cyberpunk-regular;
+    src: url(../../public/assets/fonts/Cyberpunk.ttf);
+}
+
+@font-face {
+    font-family: glitch-regular;
+    src: url(../../public/assets/fonts/glitch.ttf);
+}
+
+.main-content {
+    background-color: gray;
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    .m-c-left-section {
+        width: 50%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: black;
+
+        .m-c-l-s-title {
+            font-family: cyberpunk-regular;
+            color: white;
+
+            font-size: 90px;
+        }
+    }
+    
+    .m-c-right-section {
+        width: 60%;
+        height: 100%;
+
+        background-color: yellow;
+
+        position: absolute;
+        top: 0;
+        right: -85px;
+
+
+        -webkit-transform: skew(-10deg); /* Chrome, Opera */
+        -ms-transform: skew(-10deg); /* IE */
+        transform: skew(-10deg);
+        .m-c-r-content {
+            -webkit-transform: skew(-10deg); /* Chrome, Opera */
+            -ms-transform: skew(-10deg); /* IE */
+            transform: skew(10deg);
+
+            .m-c-r-s-nav {
+                width: 85%;
+                padding: 20px;
+                transform: skew(0deg);
+                
+                .m-c-r-s-ul {
+                    display: flex;
+                    gap: 30px;
+                    justify-content: space-evenly;
+                    align-items: center;
+    
+                    .m-c-r-s-n-items {
+                        cursor: pointer;
+
+                        text-transform: uppercase;
+                        list-style: none;
+                        
+                        font-size: 26px;
+
+                        font-style: normal;
+                        font-family: glitch-regular;
+
+                        &:hover, &:active {
+                            color: darkgoldenrod;
+                            text-decoration: underline;
+                            text-underline-offset: 1px;
+
+                            transition-duration: 450ms;
+                        }
+                    }
+                }
+            }
+
+            .m-c-r-logo {
+                position: absolute;
+
+                max-width: 700px;
+                width: 100%;
+                height: auto;
+                
+                top: 750px;
+                left: -180px;
+            }
+
+            .m-c-r-woman-person {
+                max-width: 800px;
+                width: 100%;
+                height: auto;
+
+                position: absolute;
+                top: 80px;
+                right: 80px;
+
+                z-index: 1;
+            }
+        }
+    }
+}

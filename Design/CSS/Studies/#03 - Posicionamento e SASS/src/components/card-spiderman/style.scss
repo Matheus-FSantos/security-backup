@@ -1,0 +1,8 @@
+@import "../../../public/sass/variables/_colors.sass";
+@import "../../../public/sass/components/card-personagem";
+
+main {
+    display: flex;
+    gap: 50px;
+    padding: 30px;
+}

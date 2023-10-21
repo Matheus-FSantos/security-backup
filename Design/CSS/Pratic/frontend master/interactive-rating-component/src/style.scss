@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    font-family: 'Overpass', sans-serif;
+
+    gap: 20px;
+
+    .main-container {
+        border: 1px solid blue;
+        border-radius: 20px;
+        
+        background-color: hsl(213, 19%, 18%);
+
+        max-width: 300px;
+        width: 100%;
+        height: 280px;
+
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+
+        .rate-buttons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            border: 1px solid red;
+            
+            gap: 10px;
+
+            max-width: 100%;
+            width: 100%;
+            height: 70px;
+        
+            .btn-rate {
+                border-radius: 100%;
+                width: 50px;
+                height: 40px;
+        
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                font-size: 14px;
+
+                background-color: rgb(75, 85, 88);
+                color: rgb(175, 175, 175);
+        
+                cursor: pointer;
+        
+                &:hover, &:active {
+                    background-color: hsl(25, 97%, 53%);
+                    color: white 
+                }
+            }
+        
+            .btn-clicked {
+                background-color: hsl(217, 12%, 63%);
+                color: white;
+            }
+        }
+
+        .btn-primary {
+            border: 0;
+            border-radius: 20px;
+
+            color: white;
+
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            cursor: pointer;
+            
+            height: 50px;
+            background-color: hsl(25, 97%, 53%);
+
+            &:hover {
+                background-color: white;
+                color: hsl(25, 97%, 53%);
+            }
+
+        }
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}

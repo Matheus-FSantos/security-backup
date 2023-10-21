@@ -1,0 +1,303 @@
+@font-face {
+    font-family: HankenGrotesk-Variable;
+    src: url(../public/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: HankenGrotesk-Bold;
+    src: url(../public/assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+
+@font-face {
+    font-family: HankenGrotesk-ExtraBold;
+    src: url(../public/assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: HankenGrotesk-Medium;
+    src: url(../public/assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+
+    gap: 20px;
+
+    .container {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+        display: flex;
+        flex-direction: row;
+        border-radius: 30px;
+    
+        max-width: 550px;
+        width: 100%;
+        height: 380px;
+    
+        .right-section, .left-section {
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+        }
+
+        .left-section {
+            background-color: #4837F4;
+            color: white;
+    
+            padding: 20px;
+    
+            max-width: 250px;
+            width: 100%;
+    
+            border-radius: 30px;
+    
+            justify-content: center;
+            align-items: center;
+    
+            gap: 20px;
+
+            .l-s-title {
+                font-family: HankenGrotesk-Bold;
+                color: #c8bbff;
+                font-size: 17px;
+            }
+
+            .l-s-circle {
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 80px -20px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -20px inset;
+                max-width: 150px;
+                width: 100%;
+                height: 45%;
+                
+                border-radius: 50%;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                .l-s-c-title {
+                    font-family:  HankenGrotesk-ExtraBold;
+                    font-size: 50px;
+                }
+
+                .l-s-c-subtitle {
+                    font-family:  HankenGrotesk-Variable;
+                    font-weight: 800;
+                    font-size: 12px;
+                    color: #ab98ff;
+                }
+            }
+
+            .l-s-texts {
+                width: 80%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                text-align: center;
+
+                gap: 10px;
+
+                .l-s-great {
+                    font-family: HankenGrotesk-Variable;
+                    font-weight: 800;
+                    font-size: 22px;
+                }
+
+                .l-s-subtitle {
+                    font-family: HankenGrotesk-Variable;
+                    font-size: clamp(12px, 12px, 12px);
+                    
+                    color: #ccc0ff;
+                }
+            }
+        }
+
+        .right-section {
+            max-width: 450px;
+            width: 100%;
+
+            padding: 30px 45px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .r-s-title {
+               font-size: 18px;
+               font-family: HankenGrotesk-Bold;
+               
+               color: rgb(46, 46, 46);
+            }
+
+            .btn-primary {
+                font-family: HankenGrotesk-Variable;
+                font-weight: 800;
+
+                background-color: #2F3B5B;
+                color: white;
+
+                padding: 10px;
+
+                border: 0;
+                border-radius: 20px;
+
+                cursor: pointer;
+
+                &:hover, &:active{
+                    background-color: #5c678a;
+                    transition-duration: 500ms;
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+
+                gap: 10px;
+
+                .list-item {
+                    
+                    width: 100%;
+                    height: 45px;
+
+                    padding: 10px;
+                    border-radius: 10px;
+                
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .l-i-title {
+                        display: flex;
+                        align-items: center;
+
+                        gap: 5px;
+                     
+                        font-family: HankenGrotesk-Medium;
+                    }
+
+                    .l-i-values {
+                        font-size: 15px;
+                        font-family: HankenGrotesk-Bold;
+                        color: black;
+
+                        .text-mute {
+                            color: gray;
+                        }
+                    }
+                }
+
+                /* Card Colors */
+                .background-red {
+                    background-color: rgba(255, 84, 84, 0.1);
+                    color: rgb(255, 84, 84);
+                }
+
+
+                .background-orange {
+                    background-color: rgba(255, 166, 0, 0.1);
+                    color: rgb(255, 166, 0);    
+                }
+
+                .background-green {
+                    background-color: rgba(0, 163, 150, 0.1);
+                    color: rgb(0, 163, 150);    
+                }
+
+                .background-blue {
+                    background-color: rgba(0, 0, 255, 0.1);
+                    color: rgb(0, 0, 255);
+                }
+            }
+        }
+    }
+
+    .attribution {
+        font-size: 11px; text-align: center;
+        
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    main {
+        padding: 0;
+        gap: 100px;
+        
+        .container {
+            flex-direction: column;
+            box-shadow: none;
+
+            border-radius: 0;
+
+            width: 100%;
+            height: 100%;
+        
+            .left-section {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+
+                max-width: 100%;
+                height: 350px;
+                
+                .l-s-circle {
+                    height: 150px;
+                }
+
+                .l-s-texts {
+                    .l-s-subtitle {
+                        max-width: 200px;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .right-section {
+                max-width: 100%;
+
+                .btn-primary {
+                    padding: 15px;
+                    border-radius: 30px;
+                }
+            }
+        }
+
+        .attribution {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+
+            gap: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 270px) {
+    main {
+        .container {
+            .right-section {
+                .r-s-title {
+                    text-align: center;
+                }
+                ul {
+                    .list-item {
+                        flex-direction: column;
+
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+}

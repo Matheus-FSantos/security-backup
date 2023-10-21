@@ -1,0 +1,597 @@
+18-Oct-2023 14:51:10.815 INFORMAÇÕES [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+18-Oct-2023 14:51:10.815 INFORMAÇÕES [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+18-Oct-2023 14:51:10.815 INFORMAÇÕES [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@22ace471')
+18-Oct-2023 17:54:51.076 INFORMAÇÕES [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Marking servlet [ProductsController] as unavailable
+18-Oct-2023 17:54:51.077 GRAVE [http-nio-8080-exec-224] org.apache.catalina.core.StandardWrapperValve.invoke Allocate exception for servlet [ProductsController]
+	javax.persistence.PersistenceException: No Persistence provider for EntityManager named WebAppPU
+		at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:86)
+		at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+		at model.configuration.Connection.<init>(Connection.java:12)
+		at model.repository.ProductRepository.<init>(ProductRepository.java:11)
+		at model.service.ProductService.<init>(ProductService.java:15)
+		at controller.ProductController.<init>(ProductController.java:14)
+		at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:143)
+		at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1021)
+		at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:748)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:115)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:682)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+18-Oct-2023 17:57:33.736 INFORMAÇÕES [http-nio-8080-exec-229] org.apache.catalina.core.ApplicationContext.log Marking servlet [ProductsController] as unavailable
+18-Oct-2023 17:57:33.736 GRAVE [http-nio-8080-exec-229] org.apache.catalina.core.StandardWrapperValve.invoke Allocate exception for servlet [ProductsController]
+Local Exception Stack: 
+	Exception [EclipseLink-4003] (Eclipse Persistence Services - 2.7.12.v20230209-e5c4074ef3): org.eclipse.persistence.exceptions.DatabaseException
+Exception Description: Configuration error.  Class [com.mysql.cj.jdbc.Driver] not found.
+		at org.eclipse.persistence.exceptions.DatabaseException.configurationErrorClassNotFound(DatabaseException.java:91)
+		at org.eclipse.persistence.sessions.DefaultConnector.loadDriverClass(DefaultConnector.java:269)
+		at org.eclipse.persistence.sessions.DefaultConnector.connect(DefaultConnector.java:87)
+		at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:172)
+		at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:226)
+		at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:810)
+		at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:261)
+		at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:771)
+		at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:222)
+		at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:330)
+		at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:350)
+		at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:313)
+		at model.configuration.Connection.<init>(Connection.java:13)
+		at model.repository.ProductRepository.<init>(ProductRepository.java:11)
+		at model.service.ProductService.<init>(ProductService.java:15)
+		at controller.ProductController.<init>(ProductController.java:14)
+		at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:143)
+		at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1021)
+		at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:748)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:115)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:682)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+18-Oct-2023 19:33:43.551 GRAVE [http-nio-8080-exec-397] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/website] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [66] in the jsp file: [/index.jsp]
+Lambda expressions are allowed only at source level 1.8 or above
+63:                                     <p>Fill table to see all products...</p>
+64:                             <%
+65:                                 } else {
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+
+
+An error occurred at line: [67] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+64:                             <%
+65:                                 } else {
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+
+
+An error occurred at line: [67] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+64:                             <%
+65:                                 } else {
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+
+
+An error occurred at line: [67] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+64:                             <%
+65:                                 } else {
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+
+
+An error occurred at line: [69] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+
+
+An error occurred at line: [69] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+
+
+An error occurred at line: [69] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+
+
+An error occurred at line: [70] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+
+
+An error occurred at line: [70] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+
+
+An error occurred at line: [70] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+
+
+An error occurred at line: [71] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+
+
+An error occurred at line: [71] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+
+
+An error occurred at line: [71] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+
+
+An error occurred at line: [72] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+75:                                     });
+
+
+An error occurred at line: [72] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+75:                                     });
+
+
+An error occurred at line: [72] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+75:                                     });
+
+
+An error occurred at line: [72] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+75:                                     });
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [66] in the jsp file: [/index.jsp]
+Lambda expressions are allowed only at source level 1.8 or above
+63:                                     <p>Fill table to see all products...</p>
+64:                             <%
+65:                                 } else {
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+
+
+An error occurred at line: [67] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+64:                             <%
+65:                                 } else {
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+
+
+An error occurred at line: [67] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+64:                             <%
+65:                                 } else {
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+
+
+An error occurred at line: [67] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+64:                             <%
+65:                                 } else {
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+
+
+An error occurred at line: [69] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+
+
+An error occurred at line: [69] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+
+
+An error occurred at line: [69] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+66:                                     productList.forEach(product -> {
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+
+
+An error occurred at line: [70] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+
+
+An error occurred at line: [70] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+
+
+An error occurred at line: [70] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+67:                             %>
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+
+
+An error occurred at line: [71] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+
+
+An error occurred at line: [71] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+
+
+An error occurred at line: [71] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+68:                                         <tr>
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+
+
+An error occurred at line: [72] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+75:                                     });
+
+
+An error occurred at line: [72] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+75:                                     });
+
+
+An error occurred at line: [72] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+75:                                     });
+
+
+An error occurred at line: [72] in the jsp file: [/index.jsp]
+Cannot refer to the non-final local variable out defined in an enclosing scope
+69:                                             <td><%= product.getLgName() %></td>
+70:                                             <td><%= product.getLgBrand() %></td>
+71:                                             <td>$ <%= product.getLgPrice() %></td>
+72:                                             <td><%= product.getLgcreatedAt() %></td>
+73:                                         </tr>
+74:                             <%
+75:                                     });
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:682)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+18-Oct-2023 19:35:16.437 GRAVE [http-nio-8080-exec-396] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/website] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [216] in the generated java file: [/home/matheus/Documentos/Web-Servers/apache-tomcat-8.5.91/work/Catalina/localhost/website/org/apache/jsp/index_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [233] in the generated java file: [/home/matheus/Documentos/Web-Servers/apache-tomcat-8.5.91/work/Catalina/localhost/website/org/apache/jsp/index_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [234] in the generated java file: [/home/matheus/Documentos/Web-Servers/apache-tomcat-8.5.91/work/Catalina/localhost/website/org/apache/jsp/index_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [216] in the generated java file: [/home/matheus/Documentos/Web-Servers/apache-tomcat-8.5.91/work/Catalina/localhost/website/org/apache/jsp/index_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [233] in the generated java file: [/home/matheus/Documentos/Web-Servers/apache-tomcat-8.5.91/work/Catalina/localhost/website/org/apache/jsp/index_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [234] in the generated java file: [/home/matheus/Documentos/Web-Servers/apache-tomcat-8.5.91/work/Catalina/localhost/website/org/apache/jsp/index_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:682)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+18-Oct-2023 19:35:27.160 GRAVE [http-nio-8080-exec-398] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/website] threw exception [An exception occurred processing [/index.jsp] at line [61]
+
+58:                             <%
+59:                                 List<Product> productList = (List<Product>) request.getAttribute("products");
+60:                             
+61:                                 if(productList.isEmpty()) {
+62:                             %>
+63:                                     <p>Fill table to see all products...</p>
+64:                             <%
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "java.util.List.isEmpty()" because "productList" is null
+		at org.apache.jsp.index_jsp._jspService(index_jsp.java:174)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:682)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+18-Oct-2023 20:00:05.218 INFORMAÇÕES [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+18-Oct-2023 20:00:05.218 INFORMAÇÕES [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

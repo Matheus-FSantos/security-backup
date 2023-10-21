@@ -1,0 +1,333 @@
+/* Layout GRID */
+
+.viewContent {
+    display: grid;
+    grid-template-areas: 
+        'header header header header'
+        'nav main main main'
+        'footer footer footer footer';
+}
+
+.c-header, .c-nav, .c-main, .c-footer {
+    color: black;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+.c-nav, .c-main {
+    height: 70vh;
+}
+
+.c-header {
+    grid-area: header;
+    height: 15vh;
+    
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.c-nav {
+    grid-area: nav;
+    width: 20vw;
+    
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.c-main {
+    grid-area: main;
+    width: 80vw;
+}
+
+.c-footer {
+    grid-area: footer;
+    height: 15vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Default element styles */
+.btn, .input, .label {
+    font-size: 16px;
+}
+
+.text-muted {
+    font-size: 12px;
+    font-weight: bold;
+    color: #474A51;
+}
+
+.input {
+    max-width: 400px;
+    width: 100%;
+    height: 40px;
+    
+    padding: 5px 15px 5px 15px;
+    border: 0;
+    border-radius: 20px;
+    
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 3px;
+
+    
+    font-size: 16px;
+}
+
+.btn {
+    max-width: 150px;
+    width: 100%;
+    height: 40px;
+    
+    padding: 2px;
+    border: 1.5px solid #00f;
+    border-radius: 20px;
+    
+    color: #00f;
+    
+    background-color: transparent;
+}
+
+.btn:hover, .btn:active {
+    cursor: pointer;
+    
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn:hover {
+    background-color: #00f;
+}
+
+.btn:active {
+    background-color: darkblue;
+}
+
+.c-h-title {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.c-n-ul li {
+    list-style: none;
+}
+
+.c-n-item {
+    color: black;
+    font-size: 26px;
+    text-decoration: none;
+    
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: start;
+    align-items: center;
+}
+
+.c-n-item:hover, .c-n-item:active {
+    color: #00f;
+    text-decoration: underline;
+    text-decoration-color: #00f;
+}
+
+.btn-more-icon {
+    margin-left: 6px;
+}
+
+.pricing-btn, .careers-btn, .contact-btn {
+    color: white;
+    
+    position: fixed;
+    right: 20px;
+    
+    max-width: 50px;
+    height: 50px;
+    width: 100%;
+
+    border: 2px solid;
+    border-radius: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-btn {
+    background-color: darkgreen;
+    border-color: limegreen;
+    bottom: 20px;
+}
+
+.careers-btn {
+    background-color: #00008B;
+    border-color: blue;
+    bottom: 80px;
+}
+
+.contact-btn {
+    background-color: darkred;
+    border-color: red;
+    bottom: 140px;
+}
+
+.pricing-btn:hover, .pricing-btn:active, .careers-btn:hover, .careers-btn:active, .contact-btn:hover, .contact-btn:active {
+    cursor: pointer;
+}
+
+.pricing-btn:hover, .pricing-btn:active {
+    background-color: limegreen;
+}
+
+.careers-btn:hover, .careers-btn:active {
+    background-color: blue;
+}
+
+.contact-btn:hover, .contact-btn:active {
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FlexBox containers */
+.form-field {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: start;
+    align-items: center;
+    
+    gap: 10px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    
+    gap: 20px;
+}
+
+.c-n-ul {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+    
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media only screen and (max-width: 880px) {
+    .viewContent {
+        grid-template-areas: 
+            'header header'
+            'nav nav'
+            'main main'
+            'footer footer';
+    }
+    
+    .input {
+        max-width: 300px;
+        height: 30px
+    }
+    .btn {
+        max-width: 140px;
+        height: 30px;
+    }
+
+    
+    .c-nav {
+        width: 100vw;
+        height: 15vh;
+    }
+    
+    .c-main {
+        width: 100vw;
+    }
+    
+    .form-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        
+        gap: 15px;
+    }
+    
+    .c-n-ul {
+        width: 85vw;
+        
+        padding: 2px;
+        overflow: auto;
+        
+        flex-direction: row;
+        justify-content: start;
+        align-items: center; 
+        
+        gap: 20px;
+        
+        border: 1px solid black;
+    }
+    
+    .c-header {
+        flex-direction: column;
+        height: 30vh;
+        
+        gap: 10px;
+    }
+    
+    .gap-10 {
+        padding-right: 25px;
+    }
+    
+    .align-center {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-height: 727px) {
+    .c-header, .c-nav, .c-main, .c-footer {
+        padding: 15px;
+    }
+}

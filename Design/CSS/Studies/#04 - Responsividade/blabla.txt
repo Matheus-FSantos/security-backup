@@ -1,0 +1,9 @@
+Dicas para a atividade de Quinta feira
+
+border-colapse
+border-space
+
+so da para aplicar borda na table TD
+
+
+seletor last-chield e first-chield para aplicar borda so na primeira/ultima linha

@@ -1,0 +1,51 @@
+.card-personagem {
+    width: 400px;
+    border: 2px solid $black;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 20px 0px $dark-gray;
+  
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        width: 100%;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+
+    .info {
+        padding: 20px;
+        
+        h1 {
+            font: 600 26px "Poppins";
+            line-height: 22px;
+            color: $red;
+
+            padding-bottom: 10px;
+        }
+
+        p {
+            font: 400 20px "Poppins";
+            line-height: 22px;
+            color: $gray;
+            height: 200px;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $light-gray;
+                border-radius: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.card-personagem {
+  width: 400px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3294117647);
+}
+.card-personagem:hover {
+  transform: scale(1.05);
+}
+.card-personagem img {
+  width: 100%;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.card-personagem .info {
+  padding: 20px;
+}
+.card-personagem .info h1 {
+  font: 600 26px "Poppins";
+  line-height: 22px;
+  color: #c51f1f;
+  padding-bottom: 10px;
+}
+.card-personagem .info p {
+  font: 400 20px "Poppins";
+  line-height: 22px;
+  color: #4e4a4a;
+  height: 200px;
+  overflow: auto;
+}
+.card-personagem .info p::-webkit-scrollbar {
+  width: 8px;
+}
+.card-personagem .info p::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.card-personagem .info p::-webkit-scrollbar-thumb {
+  background-color: #b1b1b1;
+  border-radius: 20px;
+}
+
+main {
+  display: flex;
+  gap: 50px;
+  padding: 30px;
+}/*# sourceMappingURL=style.css.map */

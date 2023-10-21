@@ -1,0 +1,43 @@
+.container {
+    padding: 15px;
+    background-color: #333;
+    border: 3px solid red;
+
+    display: grid;
+
+    grid-template-columns: auto auto auto;
+}
+
+.c-divs {
+    padding: 20px;
+    background-color: #ccc;
+    border: 1px solid blue;
+}
+
+#item-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#item-2 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#item-3 {
+    justify-self: end;
+    height: 100px;
+}
+
+#item-4 {
+    align-self: center;
+}
+
+#item-5 {
+    justify-self: start;
+    height: 100px;
+}
+
+#item-6 {
+    align-self: end;
+}

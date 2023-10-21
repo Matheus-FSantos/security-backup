@@ -1,0 +1,223 @@
+@font-face {
+  font-family: HankenGrotesk-Variable;
+  src: url(../public/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: HankenGrotesk-Bold;
+  src: url(../public/assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+@font-face {
+  font-family: HankenGrotesk-ExtraBold;
+  src: url(../public/assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+@font-face {
+  font-family: HankenGrotesk-Medium;
+  src: url(../public/assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+main .container {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 30px;
+  max-width: 550px;
+  width: 100%;
+  height: 380px;
+}
+main .container .right-section, main .container .left-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main .container .left-section {
+  background-color: #4837F4;
+  color: white;
+  padding: 20px;
+  max-width: 250px;
+  width: 100%;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main .container .left-section .l-s-title {
+  font-family: HankenGrotesk-Bold;
+  color: #c8bbff;
+  font-size: 17px;
+}
+main .container .left-section .l-s-circle {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 80px -20px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -20px inset;
+  max-width: 150px;
+  width: 100%;
+  height: 45%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .container .left-section .l-s-circle .l-s-c-title {
+  font-family: HankenGrotesk-ExtraBold;
+  font-size: 50px;
+}
+main .container .left-section .l-s-circle .l-s-c-subtitle {
+  font-family: HankenGrotesk-Variable;
+  font-weight: 800;
+  font-size: 12px;
+  color: #ab98ff;
+}
+main .container .left-section .l-s-texts {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+main .container .left-section .l-s-texts .l-s-great {
+  font-family: HankenGrotesk-Variable;
+  font-weight: 800;
+  font-size: 22px;
+}
+main .container .left-section .l-s-texts .l-s-subtitle {
+  font-family: HankenGrotesk-Variable;
+  font-size: 12px;
+  color: #ccc0ff;
+}
+main .container .right-section {
+  max-width: 450px;
+  width: 100%;
+  padding: 30px 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .container .right-section .r-s-title {
+  font-size: 18px;
+  font-family: HankenGrotesk-Bold;
+  color: rgb(46, 46, 46);
+}
+main .container .right-section .btn-primary {
+  font-family: HankenGrotesk-Variable;
+  font-weight: 800;
+  background-color: #2F3B5B;
+  color: white;
+  padding: 10px;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+main .container .right-section .btn-primary:hover, main .container .right-section .btn-primary:active {
+  background-color: #5c678a;
+  transition-duration: 500ms;
+}
+main .container .right-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Card Colors */
+}
+main .container .right-section ul .list-item {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container .right-section ul .list-item .l-i-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: HankenGrotesk-Medium;
+}
+main .container .right-section ul .list-item .l-i-values {
+  font-size: 15px;
+  font-family: HankenGrotesk-Bold;
+  color: black;
+}
+main .container .right-section ul .list-item .l-i-values .text-mute {
+  color: gray;
+}
+main .container .right-section ul .background-red {
+  background-color: rgba(255, 84, 84, 0.1);
+  color: rgb(255, 84, 84);
+}
+main .container .right-section ul .background-orange {
+  background-color: rgba(255, 166, 0, 0.1);
+  color: rgb(255, 166, 0);
+}
+main .container .right-section ul .background-green {
+  background-color: rgba(0, 163, 150, 0.1);
+  color: rgb(0, 163, 150);
+}
+main .container .right-section ul .background-blue {
+  background-color: rgba(0, 0, 255, 0.1);
+  color: rgb(0, 0, 255);
+}
+main .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+main .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 550px) {
+  main {
+    padding: 0;
+    gap: 100px;
+  }
+  main .container {
+    flex-direction: column;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+  main .container .left-section {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    max-width: 100%;
+    height: 350px;
+  }
+  main .container .left-section .l-s-circle {
+    height: 150px;
+  }
+  main .container .left-section .l-s-texts .l-s-subtitle {
+    max-width: 200px;
+    width: 100%;
+  }
+  main .container .right-section {
+    max-width: 100%;
+  }
+  main .container .right-section .btn-primary {
+    padding: 15px;
+    border-radius: 30px;
+  }
+  main .attribution {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+  }
+}
+@media only screen and (max-width: 270px) {
+  main .container .right-section .r-s-title {
+    text-align: center;
+  }
+  main .container .right-section ul .list-item {
+    flex-direction: column;
+    height: 60px;
+  }
+}/*# sourceMappingURL=style.css.map */

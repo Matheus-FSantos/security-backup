@@ -1,0 +1,38 @@
+/* Template Area */
+.container {
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+    
+    display: grid;
+    grid-template-areas: 
+        'header header header header'
+        'sidebar content content content'
+        'footer footer footer footer';
+
+    gap: 5px;
+}
+
+.container > .c-div {
+    padding: 20px;
+    background-color: #ccc;
+    border: 1px solid red;
+}
+
+#header {
+    grid-area: header;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    height: 61.6vh;
+}
+
+#content {
+    grid-area: content;
+    height: 61.6vh;
+}
+
+#footer {
+    grid-area: footer;
+}

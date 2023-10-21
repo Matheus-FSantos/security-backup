@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "f1";
+    src: url(../../public/assets/fonts/font1.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "f2";
+    src: url(../../public/assets/fonts/font2.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "f3";
+    src: url(../../public/assets/fonts/font3.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "f4";
+    src: url(../../public/assets/fonts/font4.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "f5";
+    src: url(../../public/assets/fonts/font5.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "f6";
+    src: url(../../public/assets/fonts/font6.woff2) format("woff2");
+}
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "f3";
+
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}

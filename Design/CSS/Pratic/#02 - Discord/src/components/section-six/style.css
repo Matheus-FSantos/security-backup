@@ -1,0 +1,50 @@
+.container-section-6 {
+  padding: 80px 30px 80px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+}
+.container-section-6 .c-s-6-content-align {
+  position: relative;
+}
+.container-section-6 .c-s-6-content-align .c-s-6-title {
+  font-family: f5;
+  font-weight: 800;
+  position: relative;
+  z-index: 99;
+  font-size: 32px;
+}
+.container-section-6 .c-s-6-content-align .c-s-6-image {
+  position: absolute;
+  top: -30px;
+  left: -50px;
+}
+.container-section-6 .c-s-6-btn-download {
+  cursor: pointer;
+  width: 100%;
+  height: 58px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 40px;
+  background-color: #404eed;
+  color: #fff;
+  max-width: 242px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.container-section-6 .c-s-6-btn-download:hover, .container-section-6 .c-s-6-btn-download:active {
+  background-color: #616bd4;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 500px) {
+  .container-section-6 {
+    align-items: start;
+  }
+}/*# sourceMappingURL=style.css.map */

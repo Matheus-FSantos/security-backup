@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 2000px;
+}
+
+.box {
+    width: 80vw;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid black;
+
+    position: relative;
+}
+
+.b-btn {
+    padding: 10px 20px;
+
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+
+    background-color: blue;
+    border-radius: 10px;
+
+    border: 1px solid rgb(69, 69, 185);
+
+    cursor: pointer;
+}
+
+.b-btn-whatsapp {
+    background-color: green;
+    padding: 10px 20px;
+
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+
+    border-radius: 10px;
+    border: 1px solid rgb(69, 69, 185);
+
+    cursor: pointer;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px
+
+}
+
+.b-btn:hover {
+    background-color:  rgb(69, 69, 185);
+}
+
+.b-btn:active {
+    background-color:  rgb(69, 69, 185);
+}
+
+.btn-relative {
+    position: relative;
+    left: 30px;
+
+    z-index: 0;
+}
+
+.btn-absolute {
+    position: absolute;
+
+    top:-20px;
+    right: -20px;
+}
+
+.margin {
+    margin-left: 10px;
+}
+
+.stick {
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    position: relative;
+}
+
+.b-s-title {
+    position: sticky; /* permanece na visão do usuário, até sair do container */
+    top: 0px;
+}

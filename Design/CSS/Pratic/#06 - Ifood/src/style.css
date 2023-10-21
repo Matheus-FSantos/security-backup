@@ -1,0 +1,384 @@
+@font-face {
+  font-family: ifood-regular;
+  src: url(../public/assets/fonts/iFoodRCTextos-Regular.woff2);
+}
+@font-face {
+  font-family: ifood-bold;
+  src: url(../public/assets/fonts/iFoodRCTitulos-Bold.woff2);
+}
+.section-main {
+  background-color: gray;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.section-main .s-m-header {
+  background-color: #FFFFFF;
+  padding: 1.375rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.section-main .s-m-header .s-m-image-div {
+  max-width: 100px;
+}
+.section-main .s-m-header .s-m-image-div .s-m-i-d-logo {
+  width: 100%;
+}
+.section-main .s-m-header .s-m-common-questions {
+  cursor: pointer;
+  font-family: ifood-regular;
+  font-size: 0.863rem;
+  color: #525252;
+}
+.section-main .s-m-header .s-m-common-questions:hover {
+  text-decoration: underline;
+  text-underline-offset: 1;
+}
+.section-main .s-m-gift-your-team {
+  background-color: red;
+  max-height: 630px;
+  width: 100%;
+  height: 700px;
+  background-image: url(https://v.fastcdn.co/u/1bf939ea/64313256-0-Frame-427319786-1.svg);
+  background-repeat: no-repeat;
+  background-position-x: 28%;
+  background-position-y: 50%;
+  position: relative;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 99;
+  right: 290px;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text {
+  color: white;
+  font-family: ifood-bold;
+  font-size: 4.375rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text .l-t-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 4.5rem;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text .l-t-title .l-t-t-alone-star {
+  display: flex;
+  justify-content: end;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text .l-t-title .l-t-t-alone-star .l-t-t-a-s-star {
+  width: 0.844rem;
+  position: relative;
+  right: 50px;
+  bottom: 30px;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text .l-t-title .l-t-t-first-line {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 30px;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text .l-t-title .l-t-t-first-line .l-t-t-t-l-first-star {
+  width: 1.875rem;
+  position: relative;
+  bottom: 10px;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text .l-t-title .l-t-t-secound-line {
+  display: flex;
+  gap: 1.875rem;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text .l-t-title .l-t-t-secound-line .l-t-t-s-l-your {
+  font-size: 1.875rem;
+  position: relative;
+  bottom: 0.625rem;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text .l-t-title .l-t-t-third-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text .l-t-title .l-t-t-third-line .l-t-t-t-l-third-star {
+  position: relative;
+  left: 40px;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-left-text .l-t-title .l-t-t-third-line .l-t-t-t-l-with-ifood {
+  font-size: 1.875rem;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-right-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.625rem;
+  width: 350px;
+  gap: 20px;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-right-text .r-t-title {
+  font-family: ifood-bold;
+  font-size: 1.25rem;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-texts .s-m-g-y-t-right-text .r-t-subtitle {
+  font-family: ifood-regular;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-woman-image {
+  width: 960px;
+  height: auto;
+  position: absolute;
+  left: 30%;
+  margin-left: 18%;
+  bottom: 0;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-dual-card {
+  width: 100%;
+  position: absolute;
+  z-index: 98;
+  bottom: 0;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-dual-card .d-c-relative {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  top: 115px;
+  width: 100%;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-dual-card .d-c-relative .d-c-card {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 25px;
+  padding: 0px 30px;
+  max-width: 400px;
+  width: 100%;
+  height: 200px;
+  box-shadow: rgba(93, 93, 93, 0.15) 4px 0 24px 0;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-dual-card .d-c-relative .d-c-title {
+  line-height: 2rem;
+  font-family: ifood-bold;
+  font-size: 20px;
+  color: #000000;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-dual-card .d-c-relative .text-width-90 {
+  width: 90%;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-dual-card .d-c-relative .d-c-btn-primary {
+  background-color: #141414;
+  color: #FFFFFF;
+  border: 0;
+  font-size: 0.8669rem;
+  width: 80%;
+  height: 50px;
+  cursor: pointer;
+}
+.section-main .s-m-gift-your-team .s-m-g-y-t-dual-card .d-c-relative .d-c-btn-primary:hover {
+  background-color: #3D3D3D;
+}
+.section-main .s-m-why-purchease-on-ifood {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 700px;
+  padding-top: 195px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.section-main .s-m-why-purchease-on-ifood .w-p-o-i-title {
+  font-family: ifood-bold;
+  font-size: 50px;
+  color: #000000;
+}
+.section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards {
+  display: flex;
+  max-width: 1480px;
+  width: 90%;
+  height: 200px;
+}
+.section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards .i-c-card {
+  width: 33.3%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards .i-c-card .c-c-texts {
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  gap: 15px;
+  width: 60%;
+  height: 100%;
+  text-align: justify;
+  line-height: 1.375rem;
+}
+.section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards .i-c-card .c-c-texts .c-c-title {
+  font-family: ifood-bold;
+  font-size: 1.1146rem;
+  color: #1a1a1a;
+}
+.section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards .i-c-card .c-c-texts .c-c-subtitle {
+  font-family: ifood-regular;
+  font-size: 75%;
+  color: #37465A;
+}
+.section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards .i-c-card .right-20 {
+  right: 30px;
+}
+.section-main .s-m-why-purchease-on-ifood .i-c-gift-your-team {
+  margin-top: 20px;
+  border: 0px;
+  background-color: #F5F5F5;
+  color: #000000;
+  max-width: 200px;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 30px;
+  font-family: ifood-bold;
+  font-size: 13px;
+  cursor: pointer;
+  transition-duration: 0ms;
+}
+.section-main .s-m-why-purchease-on-ifood .i-c-gift-your-team:hover {
+  background-color: #E0E0E0;
+}
+.section-main .s-m-with-ifood {
+  background-image: url(https://v.fastcdn.co/u/1bf939ea/64289428-0-Vantagens-B2B.png);
+  background-position-x: 42%;
+  background-position-y: 46%;
+  height: 30.0625rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding: 80px 150px;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 65%;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-title {
+  font-family: ifood-bold;
+  font-size: 2.1672rem;
+  text-align: left;
+  color: #FFFFFF;
+  width: 100%;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-ul {
+  display: grid;
+  grid-template-areas: "container1 container1 container3 container3" "container2 container2 container4 container4";
+  width: 100%;
+  gap: 10px;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-ul .w-i-ul-item {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  border: 1px solid blue;
+  width: 500px;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-ul .w-i-ul-item .item-image {
+  width: 25px;
+  height: 40px;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-ul .w-i-ul-item .item-texts {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 80%;
+  height: 120px;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-ul .w-i-ul-item .item-texts .w-i-u-i-title {
+  font-family: ifood-regular;
+  font-size: 0.9907rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-ul .w-i-ul-item .item-texts .w-i-u-i-subtitle {
+  font-family: ifood-regular;
+  font-size: 0.8669rem;
+  text-align: justify;
+  line-height: 1.375rem;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-ul #container1 {
+  grid-area: container1;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-ul #container2 {
+  grid-area: container2;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-ul #container3 {
+  grid-area: container3;
+}
+.section-main .s-m-with-ifood .s-m-w-i-content .w-i-ul #container4 {
+  grid-area: container4;
+}
+.section-main .chat-btn {
+  background-color: #FE3902;
+  cursor: pointer;
+  position: fixed;
+  z-index: 99;
+  bottom: 40px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-main .chat-btn:hover {
+  background-color: #ff6b43;
+  transform: scale(1.06);
+}
+.section-main .chat-btn .c-b-primary {
+  width: 80px;
+  height: auto;
+}
+
+@media only screen and (max-width: 1120px) {
+  .section-main .s-m-why-purchease-on-ifood {
+    border: 1px solid red;
+    height: 1100px;
+  }
+  .section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards .i-c-card {
+    width: 65%;
+  }
+  .section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards .i-c-card .c-c-texts .c-c-title {
+    font-size: 14px;
+  }
+  .section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards .i-c-card .c-c-texts .c-c-subtitle {
+    font-size: 70%;
+    color: #37465A;
+  }
+  .section-main .s-m-why-purchease-on-ifood .w-p-o-i-cards .i-c-card .right-20 {
+    right: 0;
+  }
+  .section-main .s-m-why-purchease-on-ifood .i-c-gift-your-team {
+    max-width: 350px;
+    height: 50px;
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,82 @@
+@font-face {
+  font-family: cyberpunk-regular;
+  src: url(../../public/assets/fonts/Cyberpunk.ttf);
+}
+@font-face {
+  font-family: glitch-regular;
+  src: url(../../public/assets/fonts/glitch.ttf);
+}
+.main-content {
+  background-color: gray;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.main-content .m-c-left-section {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+.main-content .m-c-left-section .m-c-l-s-title {
+  font-family: cyberpunk-regular;
+  color: white;
+  font-size: 90px;
+}
+.main-content .m-c-right-section {
+  width: 60%;
+  height: 100%;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  right: -85px; /* Chrome, Opera */ /* IE */
+  transform: skew(-10deg);
+}
+.main-content .m-c-right-section .m-c-r-content { /* Chrome, Opera */ /* IE */
+  transform: skew(10deg);
+}
+.main-content .m-c-right-section .m-c-r-content .m-c-r-s-nav {
+  width: 85%;
+  padding: 20px;
+  transform: skew(0deg);
+}
+.main-content .m-c-right-section .m-c-r-content .m-c-r-s-nav .m-c-r-s-ul {
+  display: flex;
+  gap: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main-content .m-c-right-section .m-c-r-content .m-c-r-s-nav .m-c-r-s-ul .m-c-r-s-n-items {
+  cursor: pointer;
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 26px;
+  font-style: normal;
+  font-family: glitch-regular;
+}
+.main-content .m-c-right-section .m-c-r-content .m-c-r-s-nav .m-c-r-s-ul .m-c-r-s-n-items:hover, .main-content .m-c-right-section .m-c-r-content .m-c-r-s-nav .m-c-r-s-ul .m-c-r-s-n-items:active {
+  color: darkgoldenrod;
+  text-decoration: underline;
+  text-underline-offset: 1px;
+  transition-duration: 450ms;
+}
+.main-content .m-c-right-section .m-c-r-content .m-c-r-logo {
+  position: absolute;
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  top: 750px;
+  left: -180px;
+}
+.main-content .m-c-right-section .m-c-r-content .m-c-r-woman-person {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  z-index: 1;
+}/*# sourceMappingURL=style.css.map */

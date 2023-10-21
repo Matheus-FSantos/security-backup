@@ -1,0 +1,31 @@
+.container-app {
+  background-color: #333;
+  display: grid;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+}
+
+.header, .main, .footer {
+  background-color: #ccc;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+}
+
+.main, .footer {
+  border-top: 2px solid red;
+}
+
+.header {
+  grid-area: header;
+  height: 15vh;
+}
+
+.main {
+  grid-area: main;
+  height: 100vh;
+}
+
+.footer {
+  grid-area: footer;
+  height: 15vh;
+}/*# sourceMappingURL=style.css.map */

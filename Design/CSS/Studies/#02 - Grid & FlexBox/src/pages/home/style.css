@@ -1,0 +1,70 @@
+a {
+    color: white;
+}
+
+.h1 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.header {
+    background: #1d1e20;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    border-bottom: 1px solid black;
+}
+
+.h-menu {
+    border: 1px solid white;
+    display: flex;
+
+    gap: 20px;
+}
+
+.h-m-items {
+    display: block;
+    padding: 10px;
+
+    background-color: rgb(255, 52, 16);
+}
+
+.h-m-items:hover {
+    background-color: tomato;
+}
+
+/* CSS FlexBox - #01*/
+
+.c-image {
+    max-width: 100%;
+    display: block;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    gap: 10px;
+}
+
+.flex > div {
+    border: 1px solid brown;
+    flex: 1 1 300px;
+}
+
+/* CSS Grid */
+.grid1 {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+}
